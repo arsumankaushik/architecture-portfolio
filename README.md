@@ -1,1 +1,1 @@
-# Architectural Portfolio Suman Kaushik
+# Suman Kaushik Portfolio

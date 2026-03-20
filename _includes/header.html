@@ -1,0 +1,31 @@
+<header>
+  <nav class="navbar fixed-top navbar-expand-md navbar-light bg-white shadow-sm" id="navbar">
+    <a class="navbar-brand scroll-link" href="#top">{{ site.title }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="dropdown-menu dropdown-menu-right">
+            {% for project in site.projects %}
+            <a class="dropdown-item scroll-link" href="#{{ project.title | remove: " " }}">{{ project.title }}</a>
+            {% endfor %}
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link scroll-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<nav>
+  <button class="btn btn-light d-none d-md-block" role="button" id="page-down" aria-label="Next Page">
+    <i aria-hidden="" class="fas fa-angle-down fa-lg" title="Next Page"></i>
+  </button>
+</nav>

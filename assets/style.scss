@@ -1,0 +1,61 @@
+---
+---
+
+// start content
+@import url('https://use.fontawesome.com/releases/v5.10.2/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,500,500i&display=swap');
+
+body {
+  padding-top: 56px; //displace height of fixed navbar
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+.display-4 small {
+  font-weight: 300;
+}
+#page-down {
+  position: fixed;
+  bottom: -1rem;
+  left: calc(50% - 2rem);
+  border-radius: 50%;
+  padding: .5rem;
+  height: 4rem;
+  width: 4rem;
+  z-index: 1000;
+}
+@media (min-width: 768px) {
+  main > .row {
+    min-height: calc(100vh - 56px); //Fullscreen minus the height of the navbar
+  }
+  .project:nth-child(odd) .project-image {
+    order: 13;
+  }
+  .project-image img {
+    min-height: calc(100vh - 56px);
+    object-fit: cover;
+  }
+}
+@media (max-width: 767px) {
+  .display-1 {
+    font-size: 4rem;
+  }
+  .display-3 {
+    font-size: 3.5rem;
+  }
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  #navbar .dropdown-menu {
+    border: none;
+  }
+}
+main > .row {
+  border-bottom: 1px solid #f5f5f5;
+}
+main > .row:last-of-type {
+  border-bottom: none;
+}
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #6c757d;
+}
